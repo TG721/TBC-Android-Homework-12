@@ -55,7 +55,7 @@ class FirstFragment : Fragment(), RecyclerViewInterface {
     override fun onItemClick(position: Int) {
 //        super.onItemClick(position)
 //        Toast.makeText(requireContext(), "ddf$position", Toast.LENGTH_SHORT).show()
-        val action = FirstFragmentDirections.navigateToSecondFragment()
+        val action = FirstFragmentDirections.navigateToSecondFragment(position)
         Navigation.findNavController(view!!).navigate(action)
     }
 
