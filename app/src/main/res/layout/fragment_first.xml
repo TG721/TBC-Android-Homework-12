@@ -15,7 +15,7 @@
         android:id="@+id/tittleTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Search"
+        android:text="@string/search"
         android:textColor="@color/black"
         android:textSize="40sp" />
 
@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="ALL RESULTS"
+        android:text="@string/all_results"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />

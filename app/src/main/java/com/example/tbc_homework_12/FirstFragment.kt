@@ -5,17 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SearchView
-import android.widget.Toast
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.tbc_homework_12.databinding.FragmentFirstBinding
-import java.util.*
 import kotlin.collections.ArrayList
 
 
 class FirstFragment : Fragment(), RecyclerViewInterface {
-    private lateinit var binding: FragmentFirstBinding
+    private var binding: FragmentFirstBinding? = null
     var adapter: ItemAdapter = ItemAdapter(Items, this)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,18 +20,19 @@ class FirstFragment : Fragment(), RecyclerViewInterface {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentFirstBinding.inflate(inflater)
-        return binding.root
+        return binding!!.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val recyclerView = binding.recyclerView
+        val recyclerView = binding!!.recyclerView
         recyclerView.adapter = adapter
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 3)
 
-        val searchView = binding.searchView
+        val searchView = binding!!.searchView
         searchView.clearFocus()
-        searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener{
+        searchView.setOnQueryTextListener(object :
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 searchView.clearFocus()
                 return false
@@ -62,5 +60,10 @@ class FirstFragment : Fragment(), RecyclerViewInterface {
     companion object {
         @JvmStatic
         fun newInstance() = FirstFragment()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
     }
 }

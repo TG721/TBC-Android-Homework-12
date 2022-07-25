@@ -9,9 +9,9 @@ class ItemAdapter(val Items: MutableList<Item>, val recyclerViewInterface: Recyc
     RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
 
-    inner class ItemViewHolder(val binding: ItemBinding) : RecyclerView.ViewHolder(binding.root){
+    inner class ItemViewHolder(val binding: ItemBinding) : RecyclerView.ViewHolder(binding.root) {
         init {
-            binding.imageView.setOnClickListener{
+            binding.imageView.setOnClickListener {
                 if (recyclerViewInterface != null) {
                     val pos = bindingAdapterPosition
                     if (pos != RecyclerView.NO_POSITION)
