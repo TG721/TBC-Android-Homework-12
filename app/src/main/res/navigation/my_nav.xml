@@ -13,17 +13,31 @@
         <action
             android:id="@+id/navigateToSecondFragment"
             app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/navigateToSettingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <argument
+            android:name="grid4Stat"
+            app:argType="boolean"
+            android:defaultValue="false" />
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.example.tbc_homework_12.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" >
+        <argument
+            android:name="item"
+            app:argType="com.example.tbc_homework_12.Item" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.tbc_homework_12.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
         <action
             android:id="@+id/navigateToFirstFragment"
             app:destination="@id/firstFragment" />
-        <argument
-            android:name="pos"
-            app:argType="integer" />
     </fragment>
 </navigation>

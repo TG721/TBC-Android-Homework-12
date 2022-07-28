@@ -22,16 +22,12 @@ class SecondFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding!!.clickedPicTitlte.text = Items[args.pos].title
-        binding!!.clickedPicDescription.text = Items[args.pos].description
-        binding!!.clickedPicItself.setImageResource(Items[args.pos].image)
+        binding!!.clickedPicTitlte.text = args.item.title
+        binding!!.clickedPicDescription.text = args.item.description
+        binding!!.clickedPicItself.setImageResource(args.item.image)
+
     }
 
-    companion object {
-
-        @JvmStatic
-        fun newInstance() = SecondFragment()
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()

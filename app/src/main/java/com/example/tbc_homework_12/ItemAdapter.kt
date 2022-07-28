@@ -10,13 +10,13 @@ class ItemAdapter(val Items: MutableList<Item>, val recyclerViewInterface: Recyc
 
 
     inner class ItemViewHolder(val binding: ItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        init {
+        fun bind(item: Item) {
+            binding.imageView.setImageResource(item.image)
             binding.imageView.setOnClickListener {
-                if (recyclerViewInterface != null) {
-                    val pos = bindingAdapterPosition
-                    if (pos != RecyclerView.NO_POSITION)
-                        recyclerViewInterface.onItemClick(pos)
-                }
+                val pos = bindingAdapterPosition
+                if (pos != RecyclerView.NO_POSITION)
+                    recyclerViewInterface.onItemClick(item)
+
             }
         }
     }
@@ -32,10 +32,7 @@ class ItemAdapter(val Items: MutableList<Item>, val recyclerViewInterface: Recyc
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        holder.binding.apply {
-            imageView.setImageResource(Items[position].image)
-
-        }
+            holder.bind(Items[position])
     }
 
     override fun getItemCount(): Int {
