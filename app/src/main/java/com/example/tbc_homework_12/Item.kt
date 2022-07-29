@@ -15,7 +15,7 @@ val Items = mutableListOf<Item>(
     Item("nika2", "bla bla", R.drawable.nika2),
     Item("nika3", "bla bla", R.drawable.nika3),
     Item("nika4", "bla bla", R.drawable.nika4),
-    Item("mentor", "bla bla", R.drawable.mentor),
+    Item("mentor", "The luka", R.drawable.mentor),
     Item("davit1", "bla bla", R.drawable.davit1),
     Item("davit2", "bla bla", R.drawable.davit2),
     Item("lika1", "bla bla", R.drawable.lika1),
