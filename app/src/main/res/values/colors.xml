@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="svgColor"> #FF000000</color>
     <color name="svgColoOpposite"> #FFFFFFFF</color>
+    <color name="redClicked"> #f5190a</color>
 </resources>

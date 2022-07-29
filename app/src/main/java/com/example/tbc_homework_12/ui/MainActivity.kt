@@ -1,10 +1,9 @@
-package com.example.tbc_homework_12
+package com.example.tbc_homework_12.ui
 
 
-import android.content.SharedPreferences
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatDelegate
 import com.example.tbc_homework_12.databinding.ActivityMainBinding
 
 

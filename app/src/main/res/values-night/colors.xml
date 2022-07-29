@@ -2,4 +2,5 @@
 <resources>
     <color name="svgColor"> #FFFFFFFF</color>
     <color name="svgColoOpposite"> #FF000000</color>
+    <color name="redClicked"> #f5190a</color>
 </resources>

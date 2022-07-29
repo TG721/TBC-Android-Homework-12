@@ -5,4 +5,6 @@
     <string name="placeholder_textview">placeholderTextView</string>
     <string name="search">Search</string>
     <string name="all_results">ALL RESULTS</string>
+    <string name="nika_tabatadze">Nika Tabatadze</string>
+    <string name="phone_num">+995 555 888 222</string>
 </resources>

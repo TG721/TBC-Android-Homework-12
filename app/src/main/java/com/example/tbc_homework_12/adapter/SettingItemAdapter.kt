@@ -1,4 +1,4 @@
-package com.example.tbc_homework_12
+package com.example.tbc_homework_12.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,8 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.tbc_homework_12.databinding.SettingsItemBinding
 import com.example.tbc_homework_12.databinding.SettingsItemPlaceholderBinding
 import com.example.tbc_homework_12.databinding.SettingsItemVer2Binding
+import com.example.tbc_homework_12.model.SettingItem
 
-class SettingItemAdapter(private var settings: MutableList<SettingItem>,  private var onItemSwitchClicked: ((setting: SettingItem, position: Int) -> Unit))
+class SettingItemAdapter(private var settings: MutableList<SettingItem>, private var onItemSwitchClicked: ((setting: SettingItem, position: Int) -> Unit))
     : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     inner class SettingWithSwitchHolder(private val settingWithSwitch: SettingsItemVer2Binding) :

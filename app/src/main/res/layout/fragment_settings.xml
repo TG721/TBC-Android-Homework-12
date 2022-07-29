@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsFragment">
+    tools:context=".ui.SettingsFragment">
         <ImageView
             android:id="@+id/imageStartBar"
             android:layout_width="50dp"
@@ -33,8 +33,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Nika Tabatadze"
-            android:textSize="20dp"
+            android:text="@string/nika_tabatadze"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,14 +48,14 @@
             android:layout_marginBottom="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageUser"
             app:layout_constraintStart_toEndOf="@+id/imageUser"
-            app:srcCompat="@drawable/ic_pencil_button" />
+            app:srcCompat="@drawable/ic_pencil_button"/>
 
         <TextView
             android:id="@+id/numberText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="+995 555 888 222"
+            android:text="@string/phone_num"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"

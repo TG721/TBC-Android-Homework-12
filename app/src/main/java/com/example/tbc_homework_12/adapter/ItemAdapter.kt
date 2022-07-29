@@ -1,9 +1,11 @@
-package com.example.tbc_homework_12
+package com.example.tbc_homework_12.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.tbc_homework_12.helper.RecyclerViewInterface
 import com.example.tbc_homework_12.databinding.ItemBinding
+import com.example.tbc_homework_12.model.Item
 
 class ItemAdapter(val Items: MutableList<Item>, val recyclerViewInterface: RecyclerViewInterface) :
     RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {

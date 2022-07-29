@@ -1,6 +1,7 @@
-package com.example.tbc_homework_12
+package com.example.tbc_homework_12.model
 
 import android.os.Parcelable
+import com.example.tbc_homework_12.R
 import kotlinx.parcelize.Parcelize
 
 

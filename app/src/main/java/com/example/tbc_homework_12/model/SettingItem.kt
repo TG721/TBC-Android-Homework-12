@@ -1,4 +1,6 @@
-package com.example.tbc_homework_12
+package com.example.tbc_homework_12.model
+
+import com.example.tbc_homework_12.R
 
 data class SettingItem(
     val startImage: Int,
