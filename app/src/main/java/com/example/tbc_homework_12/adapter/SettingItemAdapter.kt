@@ -17,7 +17,7 @@ class SettingItemAdapter(private var settings: MutableList<SettingItem>, private
         settingWithSwitch.startIcon.setImageResource(setting.startImage)
             settingWithSwitch.middleText.text = setting.title
             settingWithSwitch.endSwitch.isChecked = setting.endSwitch!!
-            settingWithSwitch.endSwitch.setOnCheckedChangeListener { _ , _ ->
+            settingWithSwitch.endSwitch.setOnClickListener {
                 onItemSwitchClicked(setting, position)
             }
         }
