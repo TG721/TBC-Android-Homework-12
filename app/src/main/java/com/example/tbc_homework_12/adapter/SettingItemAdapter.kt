@@ -2,13 +2,17 @@ package com.example.tbc_homework_12.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tbc_homework_12.databinding.SettingsItemBinding
 import com.example.tbc_homework_12.databinding.SettingsItemPlaceholderBinding
 import com.example.tbc_homework_12.databinding.SettingsItemVer2Binding
 import com.example.tbc_homework_12.model.SettingItem
+import com.example.tbc_homework_12.model.Settings
 
-class SettingItemAdapter(private var settings: MutableList<SettingItem>, private var onItemSwitchClicked: ((setting: SettingItem, position: Int) -> Unit))
+class SettingItemAdapter(private var settings: MutableList<SettingItem>
+//, private var onItemSwitchClicked: ((setting: SettingItem, position: Int) -> Unit)
+)
     : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     inner class SettingWithSwitchHolder(private val settingWithSwitch: SettingsItemVer2Binding) :
@@ -17,8 +21,12 @@ class SettingItemAdapter(private var settings: MutableList<SettingItem>, private
         settingWithSwitch.startIcon.setImageResource(setting.startImage)
             settingWithSwitch.middleText.text = setting.title
             settingWithSwitch.endSwitch.isChecked = setting.endSwitch!!
-            settingWithSwitch.endSwitch.setOnClickListener {
-                onItemSwitchClicked(setting, position)
+            settingWithSwitch.endSwitch.setOnCheckedChangeListener { _, _ ->
+//                onItemSwitchClicked(setting, position)
+                setting.endSwitch=!(setting.endSwitch)!!
+                if(Settings[4].endSwitch==true) AppCompatDelegate.setDefaultNightMode(
+                    AppCompatDelegate.MODE_NIGHT_YES)
+                else AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             }
         }
     }

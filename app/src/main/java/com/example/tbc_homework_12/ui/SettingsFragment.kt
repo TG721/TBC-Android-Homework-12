@@ -27,18 +27,14 @@ import com.github.dhaval2404.imagepicker.ImagePicker
 class SettingsFragment : Fragment() {
 
     private var binding: FragmentSettingsBinding? = null
-    private var adapter: SettingItemAdapter = SettingItemAdapter(Settings) { _, pos ->
-        updateSwitch(pos)
-    }
+    private var adapter: SettingItemAdapter = SettingItemAdapter(Settings)
+//    { _, pos ->
+//        updateSwitch(pos)
+//    }
 
-    private fun updateSwitch(pos: Int) {
-        Settings[pos].endSwitch=!(Settings[pos].endSwitch)!!
-        adapter.notifyItemChanged(pos)
-
-        if(Settings[4].endSwitch==true) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-        else AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
-    }
+//    private fun updateSwitch(pos: Int) {
+//        adapter.notifyItemChanged(pos)
+//    }
 
 
     override fun onCreateView(
